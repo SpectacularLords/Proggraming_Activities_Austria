@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<Head>
+<head>
 <title>Austria Info</title>
 <style>
     #H1{
@@ -13,6 +13,7 @@
         background-image: url('Black opacity.png') ;
         color: rgb(226, 226, 226);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 10%;
     }
     #img{
         width: 500px;
@@ -80,15 +81,24 @@
 <pre id="H1">
     <strong>Name:</strong> Francis Gabriel Piccio Austria
     
-    <strong>School:</strong> Iloilo National Highschool
-    
     <strong>Sex:</strong> Male
     
-    <strong>Age:</strong> 15
+    <strong>Age:</strong> <strong id="AGE" ></strong>
     
     <strong>Email:</strong> austriafrancisgabriel@gmail.com
     
     <strong>Cp No:</strong> 09683184981
+
+    <label for="dateage">Birthday:</label> <input type="date" name="dateaage" id="dateage" id="bday">
 </pre>
 </body>
+<script type="text/javascript">
+    let inpdate = document.querySelector('#dateage');
+    let Dte = new Date();
+    dateage.addEventListener('input', function () {
+    let date = new Date(inpdate.value);
+    document.getElementById("AGE").innerHTML = Dte.getFullYear()-date.getFullYear()
+});
+</script>
 </html>
+
